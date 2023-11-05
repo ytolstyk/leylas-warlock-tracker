@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "leyla-warlock-tracker",
-    "slug": "leyla-warlock-tracker",
+    "slug": "leylas-warlock-tracker",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -34,6 +34,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "580741f6-a3ab-4307-a419-1b495ebbac77"
+      }
+    },
+    "owner": "yurito"
   }
 }
