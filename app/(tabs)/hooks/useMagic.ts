@@ -15,7 +15,7 @@ export function useMagic() {
         mutate();
       });
     }
-  });
+  }, [data, isLoading, error, mutate]);
 
   const updateMagic = useCallback((magic: Magic) => {
     setMagic(magic).then(() => {

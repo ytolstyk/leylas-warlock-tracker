@@ -14,7 +14,7 @@ export function useMoney() {
         mutate();
       });
     }
-  });
+  }, [data, isLoading, error, mutate]);
 
   const updateMoney = useCallback((money: Money) => {
     setMoney(money).then(() => {

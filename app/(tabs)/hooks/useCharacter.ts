@@ -14,7 +14,7 @@ export function useCharacter() {
         mutate();
       });
     }
-  });
+  }, [data, error, isLoading, mutate]);
 
   const updateCharacter = useCallback((char: Character) => {
     setCharacter(char).then(() => {

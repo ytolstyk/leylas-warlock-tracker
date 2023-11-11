@@ -1,10 +1,10 @@
+const spellSlotRed = '#f74020';
+const spellSlotOrange = '#ffa229';
+const spellSlotYellow = '#ffed29';
 const spellSlotGreen = '#36c76b';
 const spellSlotBlue = '#29b0ff';
-const spellSlotRed = '#f74020';
-const spellSlotYellow = '#ffed29';
-const spellSlotPurple = '#c627cf';
-const spellSlotOrange = '#ffa229';
 const spellSlotIndigo = '#4229ff';
+const spellSlotPurple = '#c627cf';
 
 export const colors = {
   buttonPrimary: '#a659de',

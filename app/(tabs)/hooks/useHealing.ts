@@ -14,7 +14,7 @@ export function useHealing() {
         mutate();
       });
     }
-  });
+  }, [data, isLoading, error, mutate]);
 
   const updateHealing = useCallback((heal: Healing) => {
     setHealing(heal).then(() => {

@@ -1,8 +1,8 @@
 import styled from "styled-components/native";
-import { Text, View } from "../../components/Themed";
+import { Text } from "../../components/Themed";
 import { colors, spellSlots } from "../../styles/colors";
 import { lighten } from "polished";
-import { Fontisto, MaterialCommunityIcons } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const spellSlotDim = "48px";
 
