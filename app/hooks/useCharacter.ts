@@ -1,6 +1,6 @@
 import useSWR from 'swr';
-import { getCharacter, setCharacter } from '../../helpers/localStorage';
-import { Character, initialState } from '../../initialState';
+import { getCharacter, setCharacter } from '../helpers/localStorage';
+import { Character, initialState } from '../initialState';
 import { useCallback, useEffect } from 'react';
 
 const CHARACTER_KEY = 'CHARACTER';

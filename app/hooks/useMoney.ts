@@ -1,6 +1,6 @@
 import useSWR from 'swr';
-import { getMoney, setMoney } from '../../helpers/localStorage';
-import { Money, initialState } from '../../initialState';
+import { getMoney, setMoney } from '../helpers/localStorage';
+import { Money, initialState } from '../initialState';
 import { useCallback, useEffect } from 'react';
 
 const MONEY_KEY = 'MONEY';

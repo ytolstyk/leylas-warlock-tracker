@@ -1,8 +1,8 @@
 import useSWR from 'swr';
-import { getMagic, setMagic } from '../../helpers/localStorage';
-import { Magic, initialState } from '../../initialState';
+import { getMagic, setMagic } from '../helpers/localStorage';
+import { Magic, initialState } from '../initialState';
 import { useCallback, useEffect } from 'react';
-import { resetItemsOnRest, resetSlotsOnRest } from '../../helpers/resetOnRest';
+import { resetItemsOnRest, resetSlotsOnRest } from '../helpers/resetOnRest';
 
 const MAGIC_KEY = 'MAGIC';
 

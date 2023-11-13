@@ -1,4 +1,4 @@
-import { useMagic } from "../app/(tabs)/hooks/useMagic";
+import { useMagic } from "../app/hooks/useMagic";
 import { Label, MagicTitle, Row, Section } from "../app/(tabs)/styles";
 import { MagicItem } from "../app/initialState";
 import { MagicTalisman } from "./MagicTalisman";

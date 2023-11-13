@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Button } from "../../styles/buttons";
 import { Container, Label, Value, Row, CharacterImage } from "./styles";
-import { useCharacter } from "./hooks/useCharacter";
-import { CharacterForm } from "./components/CharacterForm";
+import { useCharacter } from "../hooks/useCharacter";
+import { CharacterForm } from "../../components/CharacterForm";
 import { Character } from "../initialState";
 import { Margin } from "../../styles/common";
 import { ImageBackground } from "react-native";

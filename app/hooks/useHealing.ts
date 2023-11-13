@@ -1,6 +1,6 @@
 import useSWR from "swr";
-import { Healing, initialState } from "../../initialState";
-import { getHealing, setHealing } from "../../helpers/localStorage";
+import { Healing, initialState } from "../initialState";
+import { getHealing, setHealing } from "../helpers/localStorage";
 import { useCallback, useEffect } from "react";
 
 const HEALING_KEY = 'HEALING';

@@ -96,6 +96,7 @@ export function WandOfMagicMissiles({ item, onUpdateItem }: Props) {
             <SpellRowPressable
               onPress={handleOnPress(abilityIndex)}
               onLongPress={handleLongPress(abilityIndex)}
+              style={{ paddingBottom: 36, paddingTop: 24 }}
             >
               {({ pressed }) => renderSpellSlots(ability, pressed)}
             </SpellRowPressable>

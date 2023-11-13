@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Text } from "../../../components/Themed";
-import { Button } from "../../../styles/buttons";
-import { Margin } from "../../../styles/common";
-import { StyledInput } from "../../../styles/inputs";
+import { Text } from "./Themed";
+import { Button } from "../styles/buttons";
+import { Margin } from "../styles/common";
+import { StyledInput } from "../styles/inputs";
 
 type Props = {
   moneyType: {

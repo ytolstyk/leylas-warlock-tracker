@@ -44,6 +44,12 @@
         "projectId": "580741f6-a3ab-4307-a419-1b495ebbac77"
       }
     },
-    "owner": "yurito"
+    "owner": "yurito",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/580741f6-a3ab-4307-a419-1b495ebbac77"
+    }
   }
 }
