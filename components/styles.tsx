@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
-import { Text } from "../../components/Themed";
-import { colors, spellSlots } from "../../styles/colors";
+import { Text } from "./Themed";
+import { colors, spellSlots } from "../styles/colors";
 import { lighten } from "polished";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 

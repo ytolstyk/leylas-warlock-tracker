@@ -1,4 +1,4 @@
-import { Container, Label, Row, Value } from "./styles";
+import { Container, Label, Row, Value } from "../../components/styles";
 import appInfo from "../../app.json";
 import { Margin } from "../../styles/common";
 import { Button } from "../../styles/buttons";

@@ -1,5 +1,5 @@
 import { useMagic } from "../app/hooks/useMagic";
-import { Label, MagicTitle, Row, Section } from "../app/(tabs)/styles";
+import { Label, MagicTitle, Row, Section } from "./styles";
 import { MagicItem } from "../app/initialState";
 import { MagicTalisman } from "./MagicTalisman";
 import { Text, View } from "./Themed";

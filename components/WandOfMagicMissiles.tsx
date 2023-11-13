@@ -1,9 +1,5 @@
 import { MagicItem, MagicSlot } from "../app/initialState";
-import {
-  MagicMissile,
-  SpellRow,
-  SpellRowPressable,
-} from "../app/(tabs)/styles";
+import { MagicMissile, SpellRow, SpellRowPressable } from "./styles";
 import { spellSlots } from "../styles/colors";
 import { Margin } from "../styles/common";
 import { RocketAnimation } from "./RocketAnimation";

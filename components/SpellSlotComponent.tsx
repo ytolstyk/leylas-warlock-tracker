@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import { SpellRow, SpellRowPressable, SpellSlot } from "../app/(tabs)/styles";
+import { SpellRow, SpellRowPressable, SpellSlot } from "./styles";
 import { MagicSlot } from "../app/initialState";
 import { spellSlots } from "../styles/colors";
 

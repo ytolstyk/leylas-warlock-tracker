@@ -3,7 +3,13 @@ import { Text } from "../../components/Themed";
 import { Button } from "../../styles/buttons";
 import { Potion } from "../initialState";
 import { useHealing } from "../hooks/useHealing";
-import { Container, Label, PotionIcon, PotionRow, Row } from "./styles";
+import {
+  Container,
+  Label,
+  PotionIcon,
+  PotionRow,
+  Row,
+} from "../../components/styles";
 import { Margin } from "../../styles/common";
 import { useEffect, useState } from "react";
 import { rollDiceWithModifier } from "../helpers/diceRolls";

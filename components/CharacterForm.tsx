@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "../styles/buttons";
 import { Character } from "../app/initialState";
-import { Container, Label, Row } from "../app/(tabs)/styles";
+import { Container, Label, Row } from "./styles";
 import { StyledInput } from "../styles/inputs";
 import { Margin } from "../styles/common";
 

@@ -2,7 +2,7 @@ import { ImageBackground } from "react-native";
 import { Margin } from "../../styles/common";
 import { AddOrSubtractMoney } from "../../components/AddOrSubtractMoney";
 import { useMoney } from "../hooks/useMoney";
-import { Container, Label, Value } from "./styles";
+import { Container, Label, Value } from "../../components/styles";
 
 export default function MoneyScreen() {
   const { money, isLoading, updateMoney } = useMoney();

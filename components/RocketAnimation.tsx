@@ -4,7 +4,7 @@ import Animated, {
   useAnimatedStyle,
   Easing,
 } from "react-native-reanimated";
-import { MagicMissile } from "../app/(tabs)/styles";
+import { MagicMissile } from "./styles";
 import { useEffect } from "react";
 
 type Props = {

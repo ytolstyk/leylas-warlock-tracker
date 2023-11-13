@@ -1,6 +1,6 @@
 import { ImageBackground } from "react-native";
 import { useMagic } from "../app/hooks/useMagic";
-import { Label, MagicTitle, Row, Section } from "../app/(tabs)/styles";
+import { Label, MagicTitle, Row, Section } from "./styles";
 import { MagicSlot } from "../app/initialState";
 import { Button } from "../styles/buttons";
 import { Margin } from "../styles/common";

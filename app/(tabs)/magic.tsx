@@ -1,4 +1,4 @@
-import { Container } from "./styles";
+import { Container } from "../../components/styles";
 import { ShortRestSpells } from "../../components/ShortRestSpells";
 import { LongRestSpells } from "../../components/LongRestSpells";
 import { ItemSpells } from "../../components/ItemSpells";
