@@ -49,7 +49,7 @@ export default function MoneyScreen() {
   return (
     <ImageBackground
       source={{
-        uri: "https://cdn.midjourney.com/fe387a5c-1761-4f3e-882c-1788a6790ba8/0_2.webp",
+        uri: "https://cdn.midjourney.com/ea8e7b3f-d094-4ddd-b0a6-b2afe8191afc/0_3.webp",
       }}
       imageStyle={{
         opacity: 0.5,

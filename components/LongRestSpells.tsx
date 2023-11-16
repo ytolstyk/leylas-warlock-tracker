@@ -52,10 +52,10 @@ export function LongRestSpells() {
       </Section>
       <ImageBackground
         source={{
-          uri: "https://cdn.midjourney.com/b6ad0776-476e-4b65-bb99-93828796dbfb/0_0.webp",
+          uri: "https://cdn.midjourney.com/e3fe556d-97b2-470c-9b48-21fee9f232b1/0_3.webp",
         }}
         imageStyle={{
-          opacity: 0.5,
+          opacity: 0.8,
         }}
       >
         {renderLongRestMagic()}

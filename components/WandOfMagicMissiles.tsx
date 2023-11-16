@@ -66,9 +66,9 @@ export function WandOfMagicMissiles({ item, onUpdateItem }: Props) {
       .fill(0)
       .map((_, index) => {
         return (
-          <Margin top={1} left={1} key={index}>
+          <Margin top={1} key={index}>
             <MagicMissile
-              size={36}
+              size={48}
               name="shark"
               colorIndex={index % spellSlots.length}
               isFilled={index < ability.amount}
@@ -105,10 +105,10 @@ export function WandOfMagicMissiles({ item, onUpdateItem }: Props) {
   return (
     <ImageBackground
       source={{
-        uri: "https://cdn.midjourney.com/22022697-57b0-4046-80dc-1e4484c092eb/0_0.webp",
+        uri: "https://cdn.midjourney.com/a26baf4e-e69d-4392-a620-9056c8640473/0_3.webp",
       }}
       imageStyle={{
-        opacity: 0.5,
+        opacity: 0.7,
       }}
     >
       {renderAbilities()}

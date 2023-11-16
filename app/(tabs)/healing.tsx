@@ -155,7 +155,7 @@ export default function HealingScreen() {
   return (
     <ImageBackground
       source={{
-        uri: "https://cdn.midjourney.com/28ccd177-76f7-40c7-8d22-0453676a0d11/0_2.webp",
+        uri: "https://cdn.midjourney.com/a85f6b01-a10a-4130-a661-27f1214f9820/0_0.webp",
       }}
       imageStyle={{
         opacity: 0.5,

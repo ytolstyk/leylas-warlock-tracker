@@ -54,10 +54,10 @@ export function ShortRestSpells() {
       </Section>
       <ImageBackground
         source={{
-          uri: "https://cdn.midjourney.com/49e45383-d85c-4890-8dc2-044d412ffc48/0_0.webp",
+          uri: "https://cdn.midjourney.com/e6eb329c-e3ef-437a-a6ce-0c719c62a13d/0_0.webp",
         }}
         imageStyle={{
-          opacity: 0.5,
+          opacity: 0.8,
         }}
       >
         {renderShortRestMagic()}

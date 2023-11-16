@@ -29,3 +29,9 @@ export const spellSlots = [
   spellSlotIndigo,
   spellSlotPurple,
 ];
+
+export const talismanColors = [
+  spellSlotIndigo,
+  spellSlotRed,
+  spellSlotGreen,
+];

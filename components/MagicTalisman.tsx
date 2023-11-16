@@ -1,15 +1,34 @@
 import { MagicItem, MagicSlot } from "../app/initialState";
-import { SpellRow, SpellRowPressable, SpellSlot } from "./styles";
+import { SpellRowPressable, SpellSlot } from "./styles";
 import { spellSlots } from "../styles/colors";
 import { Text } from "./Themed";
 import { View, ImageBackground } from "react-native";
+import {
+  SpellPosition,
+  TalismanSpell,
+  TalismanTitle,
+  TalismanTitleText,
+  TalismanWrapper,
+} from "./MagicTalisman.style";
+import { useMemo } from "react";
 
 type Props = {
   item: MagicItem;
   onUpdateItem: (item: MagicItem) => void;
 };
 
+const displacement = -1;
+
 export function MagicTalisman({ item, onUpdateItem }: Props) {
+  const slice = useMemo(() => {
+    const denominator = item.abilities.reduce(
+      (acc, spells) => acc + spells.total,
+      0
+    );
+
+    return (2 * Math.PI) / denominator;
+  }, [item]);
+
   const handleLongPress = (abilityIndex: number) => () => {
     const ability = item.abilities[abilityIndex];
     let newAmount = ability.amount + 1;
@@ -44,42 +63,57 @@ export function MagicTalisman({ item, onUpdateItem }: Props) {
     });
   };
 
-  function renderSpellSlots(
-    ability: MagicSlot,
-    abilityIndex: number,
-    pressed?: boolean
-  ) {
+  function renderSpellSlots(ability: MagicSlot, abilityIndex: number) {
     return Array(ability.total)
       .fill(0)
       .map((_, index) => {
+        const nextNum = abilityIndex * ability.total + index + displacement;
+        const currentSlice = nextNum * slice;
+        const xPosition = Math.cos(currentSlice) * 34 + 50;
+        const yPosition = Math.sin(currentSlice) * 34 + 50;
+
         return (
-          <SpellSlot
-            key={index}
-            colorIndex={abilityIndex % spellSlots.length}
-            isFilled={index < ability.amount}
-            percent={Number((index / (2 * ability.total)).toFixed(2))}
-            pressed={pressed}
-          />
+          <SpellPosition key={index} x={xPosition} y={yPosition}>
+            <SpellRowPressable
+              onPress={handleOnPress(abilityIndex)}
+              onLongPress={handleLongPress(abilityIndex)}
+            >
+              {({ pressed }) => (
+                <TalismanSpell
+                  colorIndex={abilityIndex}
+                  isFilled={index < ability.amount}
+                  percent={Number((index / (3 * ability.total)).toFixed(2))}
+                  pressed={pressed}
+                />
+              )}
+            </SpellRowPressable>
+          </SpellPosition>
         );
       });
   }
 
   function renderAbilities() {
     return item.abilities.map((ability, abilityIndex) => {
+      return renderSpellSlots(ability, abilityIndex);
+    });
+  }
+
+  function renderTitles() {
+    return item.abilities.map((ability, index) => {
+      const currentSlice = slice * index * ability.total + 1 / 2;
+      const xPosition = Math.cos(currentSlice) * 23 + 50;
+      const yPosition = Math.sin(currentSlice) * 23 + 50;
+      const rotationAngle = (currentSlice / (2 * Math.PI)) * 360 + 90;
+
       return (
-        <View key={ability.label}>
-          <Text>{ability.label}</Text>
-          <SpellRow>
-            <SpellRowPressable
-              onPress={handleOnPress(abilityIndex)}
-              onLongPress={handleLongPress(abilityIndex)}
-            >
-              {({ pressed }) =>
-                renderSpellSlots(ability, abilityIndex, pressed)
-              }
-            </SpellRowPressable>
-          </SpellRow>
-        </View>
+        <TalismanTitle
+          key={index}
+          x={xPosition}
+          y={yPosition}
+          rotate={rotationAngle}
+        >
+          <TalismanTitleText>{ability.label}</TalismanTitleText>
+        </TalismanTitle>
       );
     });
   }
@@ -87,13 +121,16 @@ export function MagicTalisman({ item, onUpdateItem }: Props) {
   return (
     <ImageBackground
       source={{
-        uri: "https://cdn.midjourney.com/910f1abe-f01b-435a-9045-bdc9e288b71a/0_0.webp",
+        uri: "https://cdn.midjourney.com/21e27d2c-8375-4e6a-87a1-62da1054bc59/0_3.webp",
       }}
       imageStyle={{
-        opacity: 0.5,
+        opacity: 1,
       }}
     >
-      {renderAbilities()}
+      <TalismanWrapper>
+        {renderAbilities()}
+        {renderTitles()}
+      </TalismanWrapper>
     </ImageBackground>
   );
 }

@@ -42,7 +42,7 @@ export default function CharacterScreen() {
     return (
       <ImageBackground
         source={{
-          uri: "https://cdn.midjourney.com/1689ee3a-402b-475d-8a84-3466f8936ec4/0_0.webp",
+          uri: "https://cdn.midjourney.com/c8445847-3a97-499b-a083-a3c472b5ed00/0_2.webp",
         }}
         imageStyle={{
           opacity: 0.5,
@@ -64,7 +64,7 @@ export default function CharacterScreen() {
   return (
     <ImageBackground
       source={{
-        uri: "https://cdn.midjourney.com/91b9c7b3-6562-42af-8042-83d432f13504/0_2.webp",
+        uri: "https://cdn.midjourney.com/2fcfee29-6fa0-4323-aa70-6c7783b4d274/0_3.webp",
       }}
       imageStyle={{
         opacity: 0.5,
