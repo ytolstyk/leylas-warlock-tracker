@@ -87,12 +87,17 @@ export function WandOfMagicMissiles({ item, onUpdateItem }: Props) {
   function renderAbilities() {
     return item.abilities.map((ability, abilityIndex) => {
       return (
-        <View key={ability.label}>
-          <SpellRow>
+        <View key={ability.label} style={{ width: "100%" }}>
+          <SpellRow style={{ width: "100%" }}>
             <SpellRowPressable
               onPress={handleOnPress(abilityIndex)}
               onLongPress={handleLongPress(abilityIndex)}
-              style={{ paddingBottom: 36, paddingTop: 24 }}
+              style={{
+                paddingBottom: 36,
+                paddingTop: 24,
+                justifyContent: "space-between",
+                width: "100%",
+              }}
             >
               {({ pressed }) => renderSpellSlots(ability, pressed)}
             </SpellRowPressable>
@@ -108,7 +113,7 @@ export function WandOfMagicMissiles({ item, onUpdateItem }: Props) {
         uri: "https://cdn.midjourney.com/a26baf4e-e69d-4392-a620-9056c8640473/0_3.webp",
       }}
       imageStyle={{
-        opacity: 0.7,
+        opacity: 0.8,
       }}
     >
       {renderAbilities()}

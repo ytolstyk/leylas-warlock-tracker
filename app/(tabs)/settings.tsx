@@ -1,8 +1,8 @@
 import { Container, Label, Row, Value } from "../../components/styles";
-import appInfo from "../../app.json";
 import { Margin } from "../../styles/common";
 import { Button } from "../../styles/buttons";
 import { resetAllKeys } from "../helpers/localStorage";
+import * as Application from "expo-application";
 
 export default function SettingsScreen() {
   const handleResetPress = () => {
@@ -14,7 +14,7 @@ export default function SettingsScreen() {
       <Margin bottom={4}>
         <Row>
           <Label>App version</Label>
-          <Value>{appInfo.expo.version}</Value>
+          <Value>{Application.nativeBuildVersion}</Value>
         </Row>
         <Row>
           <Label>Reset all data (long press)</Label>

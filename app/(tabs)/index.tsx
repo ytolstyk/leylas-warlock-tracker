@@ -12,9 +12,13 @@ import { CharacterForm } from "../../components/CharacterForm";
 import { Character } from "../initialState";
 import { Margin } from "../../styles/common";
 import { ImageBackground } from "react-native";
+import Slider from "@react-native-community/slider";
+import { colors } from "../../styles/colors";
+import { lighten } from "polished";
 
 export default function CharacterScreen() {
   const { character, isLoading, updateCharacter } = useCharacter();
+  const [currentRoll, setCurrentRoll] = useState(0);
   const [view, setView] = useState<"read" | "edit">("read");
 
   const handleEditPress = () => {
@@ -94,8 +98,24 @@ export default function CharacterScreen() {
             <Value>{character?.class}</Value>
           </Row>
           <Row>
-            <Label>Total Level</Label>
+            <Label>Total level</Label>
             <Value>{character?.totalLevel}</Value>
+          </Row>
+          <Row style={{ width: "100%" }}>
+            <Label>Current roll: {currentRoll}</Label>
+            <Value style={{ width: "100%" }}>
+              <Slider
+                style={{ width: 300, height: 40 }}
+                value={currentRoll}
+                step={1}
+                minimumValue={1}
+                maximumValue={26}
+                minimumTrackTintColor={colors.buttonPrimary}
+                thumbTintColor={colors.buttonPrimary}
+                maximumTrackTintColor={lighten(0.5, colors.buttonPrimary)}
+                onValueChange={(val) => setCurrentRoll(val)}
+              />
+            </Value>
           </Row>
           <Row>
             <Button onPress={handleEditPress} label="Edit" />
