@@ -2,7 +2,7 @@
   "expo": {
     "name": "leyla-warlock-tracker",
     "slug": "leylas-warlock-tracker",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/images/talisman_icon.png",
     "scheme": "myapp",
